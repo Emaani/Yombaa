@@ -54,6 +54,7 @@ export const PodcastGenerator: React.FC = () => {
       - ${host2Name} (Co-Host): ${host2Personality} (Accent: ${host2Accent})
 
       DYNAMICS & INTERACTION GUIDELINES:
+      - **Personality Embodiment:** It is critical that ${host1Name} sounds "${host1Personality}" and ${host2Name} sounds "${host2Personality}" in their choice of words, sentence structure, and reaction style.
       - **Chemistry & Banter:** The hosts should sound like they have excellent rapport. Use light banter, shared enthusiasm, and warm laughter.
       - **Reactive Listening:** Crucial! Ensure hosts react to each other's points (e.g., "That is absolutely stunning," "I couldn't agree more," "Wow, really?").
       - **Supportive Flow:** The dialogue should be complementary. One host might set up a point, and the other knocks it out of the park.
@@ -99,8 +100,8 @@ export const PodcastGenerator: React.FC = () => {
         : "Acting Direction: Perform as professional radio hosts with genuine conversational chemistry and clear reactivity.";
         
       const characterInstruction = isDualSpeaker
-        ? `Voices: ${host1Name} (${host1Personality}, Accent: ${host1Accent}) and ${host2Name} (${host2Personality}, Accent: ${host2Accent}).`
-        : `Voice: ${host1Name} (${host1Personality}, Accent: ${host1Accent}).`;
+        ? `Character Profiles: ${host1Name} is ${host1Personality} with a ${host1Accent} accent. ${host2Name} is ${host2Personality} with a ${host2Accent} accent.`
+        : `Character Profile: ${host1Name} is ${host1Personality} with a ${host1Accent} accent.`;
 
       const instructionText = `${toneInstruction} ${characterInstruction}`;
 
@@ -229,7 +230,7 @@ export const PodcastGenerator: React.FC = () => {
             onChange={(e) => setPersona(e.target.value)}
             rows={2}
             className="w-full text-sm p-2 bg-safari-50 border border-safari-200 rounded-lg focus:ring-1 focus:ring-safari-400 outline-none resize-none"
-            placeholder="e.g. Energetic and funny..."
+            placeholder="e.g. Skeptical but curious, asks lots of questions..."
            />
         </div>
 

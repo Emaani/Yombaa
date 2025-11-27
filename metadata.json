@@ -1,6 +1,6 @@
 {
   "name": "Yomba",
-  "description": "An immersive voice AI application featuring real-time conversation with Gemini Live and a dedicated travel podcast generator.",
+  "description": "An immersive voice application featuring real-time conversation with Gemini Live and a dedicated travel podcast generator.",
   "requestFramePermissions": [
     "microphone",
     "camera"
